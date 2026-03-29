@@ -1,0 +1,18 @@
+{
+  "name": "watchparty",
+  "version": "2.0.0",
+  "description": "Watch Party — room join fix + voice + screen share",
+  "scripts": {
+    "build": "cd client && npm install --include=dev && npm run build && mkdir -p ../server/public && cp -r dist/. ../server/public",
+    "start": "node server/index.js",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.0"
+  },
+  "engines": { "node": ">=18.0.0" }
+}
